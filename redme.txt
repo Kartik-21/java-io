@@ -1,0 +1,52 @@
+File -> creating a file/dir and their basic operation (create, update, delete, move)
+
+Byte Stream:
+InputStream
+    FileInputStream -> reading a file
+    ByteArrayInputStream -> reading bytes in memory
+    FilterInputStream
+        BufferedInputStream -> read data using buffer
+
+OutputStream
+    FileOutputStream -> writing a file
+    ByteArrayOutputStream -> writing bytes in memory
+    FilterOutputStream
+        BufferedOutputStream -> write data using buffer
+
+Character steam:
+Reader
+    FileReader -> reading text file
+    CharArrayReader -> reading text in memory using buffer
+    StringReader -> reading text in memory (string arg)
+    BufferedReader -> read data using buffer
+
+Writer
+    FileWriter -> write the file
+    CharArrayWriter -> writing text in memory using buffer
+    StringWriter -> writing text in memory (string arg)
+    BufferedWriter -> write data using buffer
+
+DataOutputStream -> read/write primitive datatype
+
+ObjectOutputStream -> read/write object (serialize) (bin file)
+
+========================================================================
+
+NIO:
+Path -> new version of file
+    we can access path apis using Files utility class
+
+FileChannel -> read/write file using channel(buffer)
+
+NIO2:
+FileSystem -> get file system info, get all file and storage type
+FileSystemProvider -> create/update/delete the file/dir
+
+Files: this is utility class
+
+
+Notes:
+    In the bytes steam data is some data is corrupted during decoding so, we can use base64 encoding/decoding
+
+    Files utility class internally used nio2 apis
+   
