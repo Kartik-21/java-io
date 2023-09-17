@@ -4,9 +4,9 @@ import java.io.File;
 import java.io.IOException;
 
 /*
-* file is used for create update delete operations
-*
-* */
+ * file is used for create update delete operations
+ *
+ * */
 public class FileApp {
     public static void main(String[] args) throws IOException {
 
@@ -15,12 +15,11 @@ public class FileApp {
             dir.mkdir();
         System.out.println(dir.exists());
 
-        File file = new File(dir,"p.txt");
+        File file = new File(dir, "p.txt");
         if (!file.exists())
             file.createNewFile();
         System.out.println(file.exists());
         System.out.println(file.length());
-
 
 
         System.out.println(file.getParent());

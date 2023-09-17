@@ -4,13 +4,13 @@ Byte Stream:
 InputStream
     FileInputStream -> reading a file
     ByteArrayInputStream -> reading bytes in memory
-    FilterInputStream
+    FilterInputStream -> read and manipulate the data
         BufferedInputStream -> read data using buffer
 
 OutputStream
     FileOutputStream -> writing a file
     ByteArrayOutputStream -> writing bytes in memory
-    FilterOutputStream
+    FilterOutputStream -> write and manipulate the data
         BufferedOutputStream -> write data using buffer
 
 Character steam:
@@ -46,7 +46,7 @@ Files: this is utility class
 
 
 Notes:
-    In the bytes steam data is some data is corrupted during decoding so, we can use base64 encoding/decoding
+    In the bytes steam data, some data is corrupted during decoding. so, we can use base64 for encoding/decoding bytes
 
-    Files utility class internally used nio2 apis
+    Files utility class internally used nio2, path apis
    

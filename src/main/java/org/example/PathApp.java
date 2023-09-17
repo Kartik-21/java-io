@@ -4,18 +4,16 @@ import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.ByteBuffer;
-import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
+import java.nio.file.Paths;
 
 public class PathApp {
 
     public static void main(String[] args) throws IOException {
 
-        Path path = Path.of("../text.txt");
+        Path path = Paths.get("../readme.txt");
 
 
         System.out.println(path.getFileName());
@@ -28,8 +26,8 @@ public class PathApp {
 
 
         Files.exists(path, LinkOption.NOFOLLOW_LINKS);
-        Path filePath = Path.of("C:\\Users\\kartik\\IdeaProjects\\java-io\\text.pdf");
-        Path filePath1 = Path.of("C:\\Users\\kartik\\IdeaProjects\\java-io\\text1.pdf");
+        Path filePath = Path.of("C:\\Users\\kartik\\IdeaProjects\\java-io\\readme.txt");
+        Path filePath1 = Path.of("C:\\Users\\kartik\\IdeaProjects\\java-io\\readme.txt");
 
         InputStream inputStream = new BufferedInputStream(new FileInputStream(filePath.toFile()));
         Long startLong = System.currentTimeMillis();

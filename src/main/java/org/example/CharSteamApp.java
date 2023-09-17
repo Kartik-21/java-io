@@ -7,26 +7,25 @@ public class CharSteamApp {
     public static void main(String[] args) throws IOException {
 
 
-        Reader reader=new FileReader("");
-        Writer writer=new FileWriter("");
+        Reader reader = new FileReader("");
+        Writer writer = new FileWriter("");
 
         /*
-        * it support mark and reset support /// filereader doesn't support
-        * in memory operation
-        * */
-        Reader reader1=new CharArrayReader(new char[10]);
-        Writer writer1=new CharArrayWriter();
+         * it supports mark and reset support /// file-reader doesn't support
+         * in memory operation
+         * */
+        Reader reader1 = new CharArrayReader(new char[10]);
+        Writer writer1 = new CharArrayWriter();
 
-        Reader reader2=new StringReader("");
-        Writer writer2=new StringWriter();
+        Reader reader2 = new StringReader("");
+        Writer writer2 = new StringWriter();
 
         /*
-        * it is used mostly used for reading from disk
-        * it is faster because of buffer
-        * */
-        Reader reader3=new BufferedReader(reader);
-        Writer writer3=new BufferedWriter(writer);
-
+         * it is used mostly used for reading from disk
+         * it is faster because of buffer
+         * */
+        Reader reader3 = new BufferedReader(reader);
+        Writer writer3 = new BufferedWriter(writer);
 
 
     }
