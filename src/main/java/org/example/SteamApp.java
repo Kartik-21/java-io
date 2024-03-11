@@ -1,6 +1,7 @@
 package org.example;
 
 import java.io.*;
+import java.nio.file.Files;
 import java.nio.file.Path;
 
 
@@ -30,7 +31,7 @@ public class SteamApp {
 //        System.out.println(stream1.available());
 
 
-        OutputStream outputStream = new FileOutputStream("C:\\Users\\kartik\\IdeaProjects\\java-io\\text.txt",false);
+        OutputStream outputStream = new FileOutputStream("C:\\Users\\kartik\\IdeaProjects\\java-io\\text.txt", false);
 
         long start = System.currentTimeMillis();
         while (true) {
@@ -70,5 +71,13 @@ public class SteamApp {
 
 
 //        ByteArrayOutputStream.toBufferedInputStream()
+
+
+        InputStream newInputStream = Files.newInputStream(Path.of("C:\\Users\\kartik\\IdeaProjects\\java-io\\redme.txt"));
+
+        byte[] bytes = new byte[1000];
+        newInputStream.read(bytes, 0, 1000);
+        System.out.write(bytes);
+
     }
 }
