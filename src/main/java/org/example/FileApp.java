@@ -12,6 +12,7 @@ import java.util.Base64;
  *
  * */
 public class FileApp {
+
     public static void main(String[] args) throws IOException, EncoderException {
 
         File dir = new File("dir");
